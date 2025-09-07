@@ -1,50 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess Learning Platform</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 19th Months of Love</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      text-align: center;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-top: 40px;
+      text-shadow: 0 0 10px #ff6fa5, 0 0 20px #ff3b8d, 0 0 30px #ff1a75;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff6fa5, 0 0 20px #ff3b8d, 0 0 30px #ff1a75; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #ff99cc, 0 0 40px #ff4da6; }
+    }
+    p {
+      font-size: 1.3rem;
+      margin: 10px auto 30px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    .gallery {
+      position: relative;
+      width: 500px;
+      height: 450px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 200px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      position: absolute;
+    }
+    /* Heart-shaped layout */
+    .photo1 { top: 0; left: 50%; transform: translateX(-50%); }
+    .photo2 { top: 120px; left: 0; }
+    .photo3 { top: 120px; right: 0; }
+    .photo4 { bottom: 0; left: 50%; transform: translateX(-50%); }
+
+    .gallery img::after {
+      content: "❤";
+      position: absolute;
+      font-size: 40px;
+      color: red;
+      animation: heartbeat 1.5s infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .heart {
+      position: absolute;
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      from { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      to { transform: translateY(-10vh) scale(1.5); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
+  <h1>💖 Happy 19th months of love 💖</h1>
+  <p>Every day with you feels like magic. Thank you for being my sunshine, my laughter, and my heart. I love you endlessly! 🥰</p>
 
-    <header>
-        <div class="container">
-            <h1>Unlock Your Chess Potential: Learn to Play and Love the Game!</h1>
-            <p class="subheadline">Whether you're a complete beginner or looking to sharpen your skills, our interactive platform makes learning chess fun and easy.</p>
-        </div>
-    </header>
+  <div class="gallery">
+    <img src="your-photo1.jpg" alt="Love Photo 1" class="photo1">
+    <img src="your-photo2.jpg" alt="Love Photo 2" class="photo2">
+    <img src="your-photo3.jpg" alt="Love Photo 3" class="photo3">
+    <img src="your-photo4.jpg" alt="Love Photo 4" class="photo4">
+  </div>
 
-    <section class="features">
-        <div class="container">
-            <div class="feature">
-                <h3>Interactive Lessons</h3>
-                <p>Step-by-step tutorials designed for all skill levels.</p>
-            </div>
-            <div class="feature">
-                <h3>Practice Games</h3>
-                <p>Play against AI or other learners to improve your strategy.</p>
-            </div>
-            <div class="feature">
-                <h3>Community Forum</h3>
-                <p>Connect with fellow chess enthusiasts and share your progress.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <p>Ready to start your chess journey?</p>
-            <a href="#" class="button">Start Your Free Trial Today!</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Chess Learning Platform</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+  <div class="hearts">
+    <div class="heart" style="left:10%; animation-duration:7s;">❤</div>
+    <div class="heart" style="left:30%; animation-duration:5s;">❤</div>
+    <div class="heart" style="left:50%; animation-duration:6s;">❤</div>
+    <div class="heart" style="left:70%; animation-duration:4s;">❤</div>
+    <div class="heart" style="left:90%; animation-duration:8s;">❤</div>
+  </div>
 </body>
 </html>
