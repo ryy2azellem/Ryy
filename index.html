@@ -24,7 +24,7 @@
 
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       text-shadow: 0 0 10px #ff6fa5, 0 0 20px #ff3b8d, 0 0 30px #ff1a75;
       animation: glow 2s ease-in-out infinite alternate;
       z-index: 10;
@@ -33,6 +33,18 @@
     @keyframes glow {
       from { text-shadow: 0 0 10px #ff6fa5, 0 0 20px #ff3b8d, 0 0 30px #ff1a75; }
       to { text-shadow: 0 0 20px #fff, 0 0 30px #ff99cc, 0 0 40px #ff4da6; }
+    }
+
+    .quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 25px;
+      max-width: 600px;
+      min-height: 50px;
+      z-index: 10;
+      position: relative;
+      text-shadow: 0 0 5px rgba(0,0,0,0.3);
+      transition: opacity 1s ease;
     }
 
     .gallery {
@@ -92,7 +104,30 @@
     }
   </style>
   <script>
-    window.onload = () => document.body.classList.add('fade-in');
+    window.onload = () => {
+      document.body.classList.add('fade-in');
+
+      // Rotating quotes (Tagalog-English mix)
+      const quotes = [
+        "Every love story is beautiful, pero ours is my favorite. 💕",
+        "Sa’yo lang ako nahulog nang ganito… and I’ll never regret it. 😍",
+        "Ikaw ang aking today and all of my tomorrows. 🌸",
+        "I love you more than yesterday, pero less than tomorrow. 💖",
+        "Hawak kamay, sabay tayong mangarap at magmahal. 🌙✨"
+      ];
+      let i = 0;
+      const quoteEl = document.querySelector(".quote");
+      quoteEl.textContent = quotes[i];
+      setInterval(() => {
+        i = (i + 1) % quotes.length;
+        quoteEl.style.opacity = 0;
+        setTimeout(() => {
+          quoteEl.textContent = quotes[i];
+          quoteEl.style.opacity = 1;
+        }, 1000);
+      }, 5000);
+    };
+
     function transitionToPage(href) {
       document.body.style.opacity = 0;
       setTimeout(() => { window.location.href = href }, 1000);
@@ -101,6 +136,8 @@
 </head>
 <body>
   <h1>💖 Happy 19th months of Love 💖</h1>
+
+  <div class="quote"></div>
 
   <div class="gallery">
     <img src="pic1.jpg" alt="Us 1">
